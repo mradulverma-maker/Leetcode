@@ -7,23 +7,20 @@ void main() {
         System.out.print("Enter number of elements: ");
         int a = sc.nextInt();
 
+
         int[] arr = new int[a];
 
-int c =0;
-        // Input
         for (int i = 0; i < a; i++) {
             arr[i] = sc.nextInt();
         }
-        System.out.println("Enter element :");
-        int d = sc.nextInt();
-        for (int i = 0; i < a; i++) {
-             if(arr[i]==d){
-
-                 c++;
-             }
+        boolean found = false;
+        int l = arr[0];
+        int r = arr[a-1];
+        if(l==r){
+            found = true;
+            System.out.println("true");
+            l++;
+            r++;
         }
-
-        System.out.println(c);
-
     }
 }
